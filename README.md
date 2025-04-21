@@ -29,3 +29,13 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
     ⚠️ Disclaimer: Disabling the firewall is for educational/demo purposes only. This exposes the VM to external threats for visibility.
 
     Run wf.msc → Turn off Domain, Private, and Public firewall.
+
+## 🛡️ Onboard VM to Microsoft Defender for Endpoint (MDE)
+
+    Use MDE onboarding package for Azure VMs.
+
+    Verify onboarding at: Microsoft 365 Defender Portal
+
+    Run sample hunting query to confirm logs:
+
+<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b07ac4b4-9cb3-4834-8fac-9f5f29709d78">
