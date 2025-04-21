@@ -38,4 +38,36 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
 
     Run sample hunting query to confirm logs:
 
-<img width="1212" alt="image" src="https://github.com/GbengaCyber/rce/blob/main/Screenshot%202025-04-21%20at%2013-22-24%20RCE%20Detection%20with%20KQL.png">
+<img width="700" alt="image" src="https://github.com/GbengaCyber/rce/blob/main/Screenshot%202025-04-21%20at%2013-22-24%20RCE%20Detection%20with%20KQL.png">
+
+## 🧪 Simulate RCE (Remote Code Execution)
+
+We'll simulate an RCE attempt using PowerShell to download and install 7-Zip silently.
+
+https://imgur.com/82LFyon
+
+👉 Guide: detection/powershell_rce_simulation.md
+5. 🔍 Detect with KQL
+
+Use Advanced Hunting in the MDE Portal.
+📌 Sample KQL Query
+
+DeviceProcessEvents
+| where InitiatingProcessFileName =~ "cmd.exe"
+| where ProcessCommandLine has "Invoke-WebRequest"
+| where ProcessCommandLine has "7z2408-x64.exe"
+| project Timestamp, DeviceName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
+
+
+🛑 Create Detection Rule
+
+    Go to Advanced Hunting → Detection Rules → Create custom rule
+
+    Use the above query as the condition.
+
+    Choose Alert & Isolate Device as the response.
+
+👉 Guide: detection/create_detection_rule.md
+7. 🧼 Isolate Compromised Device (Optional but recommended)
+
+If the alert fires, manually or automatically isolate the device to cut off its network access (except to MDE).
