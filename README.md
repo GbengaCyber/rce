@@ -38,4 +38,4 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
 
     Run sample hunting query to confirm logs:
 
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b07ac4b4-9cb3-4834-8fac-9f5f29709d78">
+<img width="1212" alt="image" src="https://github.com/GbengaCyber/rce/blob/main/Screenshot%202025-04-21%20at%2013-22-24%20RCE%20Detection%20with%20KQL.png">
