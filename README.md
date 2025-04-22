@@ -48,21 +48,17 @@ We'll simulate an RCE attempt using PowerShell to download and install 7-Zip sil
 
 ![image](https://github.com/user-attachments/assets/ad6b9116-0918-493a-82f8-c040779c8837)
 
+---
 
-👉 Guide: detection/powershell_rce_simulation.md
-5. 🔍 Detect with KQL
+## 🔍 Detection with MDE/KQL
 
 Use Advanced Hunting in the MDE Portal.
-📌 Sample KQL Query
 
-DeviceProcessEvents
-| where InitiatingProcessFileName =~ "cmd.exe"
-| where ProcessCommandLine has "Invoke-WebRequest"
-| where ProcessCommandLine has "7z2408-x64.exe"
-| project Timestamp, DeviceName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
+![image](https://github.com/user-attachments/assets/155876bf-81c9-495a-894d-ed909a4ea6c6)
 
+---
 
-🛑 Create Detection Rule
+## 🛑 Create Detection Rule
 
     Go to Advanced Hunting → Detection Rules → Create custom rule
 
@@ -70,7 +66,8 @@ DeviceProcessEvents
 
     Choose Alert & Isolate Device as the response.
 
-👉 Guide: detection/create_detection_rule.md
+---
+
 7. 🧼 Isolate Compromised Device (Optional but recommended)
 
 If the alert fires, manually or automatically isolate the device to cut off its network access (except to MDE).
