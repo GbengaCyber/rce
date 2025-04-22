@@ -4,11 +4,16 @@
 
 This project demonstrates how to detect Remote Code Execution (RCE) events on a Windows VM using Microsoft Defender for Endpoint (MDE) and Kusto Query Language (KQL). It also showcases how to isolate a compromised device.
 
+---
+
+
 
 ###  Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
 - MDE Platform: Microsoft Defender for Endpoint
 - Kusto Query Language (KQL)
+
+
 ---
 
 ### 🔧 Create a Windows VM in Azure
@@ -20,6 +25,9 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
     Public IP enabled to allow scanning (for simulation purposes).
 
     Enable RDP for access.
+
+
+---
 
   ### 🔥 Disable the Windows Firewall
 
