@@ -72,7 +72,22 @@ Wait/search for logs. When the logs appear, your machine should be isolated and 
 Browse to your VM within the MDE Portal (https://security.microsoft.com/machines)
 Select the VM and then click the three dots menu. If it’s isolated, observe that you can release your VM from isolation here. For now, click “Action Center” and check out the Investigation Package that was created (if it’s ready).
 
+Feel free to look through the investigation package. The investigation package is a comprehensive collection of data and artifacts, including process trees, file and registry changes, network connections, event logs, and memory dumps, generated from virtual machines to facilitate detailed analysis and investigation of security incidents.
+
+---
+
+## 🚀  Conclusion
+
+    Proactive Detection: By leveraging KQL and the MDE platform, organizations can quickly identify signs of RCE attempts and other malicious activities on their network.
+
+    Automated Response: Using MDE's built-in capabilities, it's possible to automate device isolation and stop an attack in real time, reducing the impact of a potential security breach.
+
+    Forensic Analysis: The investigation package created upon isolation provides valuable insights into the attack, allowing for a deeper analysis of the adversary's actions and potential next steps in mitigation.
+
+This project emphasizes the importance of continuous monitoring, early detection, and automated response in safeguarding corporate networks from increasingly sophisticated cyber threats. By leveraging powerful tools like MDE, KQL, and automated isolation, organizations can better defend themselves against remote code execution and other advanced attack vectors.
+
+As cybersecurity threats evolve, it’s crucial to adapt and continuously refine detection mechanisms. This project serves as a foundation for building a comprehensive endpoint protection strategy and showcases the benefits of integrating threat detection, response, and investigation workflows in a unified security platform.
 
 
-
+---
 
