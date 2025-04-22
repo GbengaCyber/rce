@@ -1,20 +1,17 @@
 # Remote Code Execution Detection / Device Isolation 
 
-
-# 🧠 Project Explanation
 ## 🎯 Objective
 
 This project demonstrates how to detect Remote Code Execution (RCE) events on a Windows VM using Microsoft Defender for Endpoint (MDE) and Kusto Query Language (KQL). It also showcases how to isolate a compromised device.
 
 
-## Platforms and Languages Leveraged
+###  Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
 - MDE Platform: Microsoft Defender for Endpoint
 - Kusto Query Language (KQL)
 ---
 
-## 🚀 Step-by-Step Guide
-🔧 Create a Windows VM in Azure
+### 🔧 Create a Windows VM in Azure
 
     Provision a Windows 10/11 or Server 2019+ VM.
 
@@ -24,13 +21,13 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
 
     Enable RDP for access.
 
-  ## 🔥 Disable the Windows Firewall
+  ### 🔥 Disable the Windows Firewall
 
     ⚠️ Disclaimer: Disabling the firewall is for educational/demo purposes only. This exposes the VM to external threats for visibility.
 
     Run wf.msc → Turn off Domain, Private, and Public firewall.
 
-## 🛡️ Onboard VM to Microsoft Defender for Endpoint (MDE)
+### 🛡️ Onboard VM to Microsoft Defender for Endpoint (MDE)
 
     Use MDE onboarding package for Azure VMs.
 
@@ -41,7 +38,7 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
 <img width="700" alt="image" src="https://github.com/GbengaCyber/rce/blob/main/Screenshot%202025-04-21%20at%2013-22-24%20RCE%20Detection%20with%20KQL.png">
 
 ---
-## 🧪 Simulate RCE (Remote Code Execution)
+### 🧪 Simulate RCE (Remote Code Execution)
 
 We'll simulate an RCE attempt using PowerShell to download and install 7-Zip silently.
 
@@ -50,7 +47,7 @@ We'll simulate an RCE attempt using PowerShell to download and install 7-Zip sil
 
 ---
 
-## 🔍 Detection with MDE/KQL
+### 🔍 Detection with MDE/KQL
 
 Use Advanced Hunting in the MDE Portal.
 
@@ -58,7 +55,7 @@ Use Advanced Hunting in the MDE Portal.
 
 ---
 
-## 🛑 Create Detection Rule
+### 🛑 Create Detection Rule
 
     Go to Advanced Hunting → Detection Rules → Create custom rule
 
@@ -68,6 +65,14 @@ Use Advanced Hunting in the MDE Portal.
 
 ---
 
-7. 🧼 Isolate Compromised Device (Optional but recommended)
+### 🧼 Isolate Compromised Device 
 
-If the alert fires, manually or automatically isolate the device to cut off its network access (except to MDE).
+Wait/search for logs. When the logs appear, your machine should be isolated and you can move to the next step. If you can no longer connect to your VM, it’s possible the Detection Rule already executed and isolated your VM. That was the case for me:
+
+Browse to your VM within the MDE Portal (https://security.microsoft.com/machines)
+Select the VM and then click the three dots menu. If it’s isolated, observe that you can release your VM from isolation here. For now, click “Action Center” and check out the Investigation Package that was created (if it’s ready).
+
+
+
+
+
