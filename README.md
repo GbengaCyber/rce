@@ -40,11 +40,14 @@ This project demonstrates how to detect Remote Code Execution (RCE) events on a 
 
 <img width="700" alt="image" src="https://github.com/GbengaCyber/rce/blob/main/Screenshot%202025-04-21%20at%2013-22-24%20RCE%20Detection%20with%20KQL.png">
 
+---
 ## 🧪 Simulate RCE (Remote Code Execution)
 
 We'll simulate an RCE attempt using PowerShell to download and install 7-Zip silently.
 
-https://imgur.com/82LFyon
+
+![image](https://github.com/user-attachments/assets/ad6b9116-0918-493a-82f8-c040779c8837)
+
 
 👉 Guide: detection/powershell_rce_simulation.md
 5. 🔍 Detect with KQL
